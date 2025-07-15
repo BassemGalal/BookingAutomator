@@ -8,6 +8,13 @@ This is a comprehensive end-to-end automation testing framework designed for boo
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### July 15, 2025
+- **Fixed Lombok Compilation Issue**: Resolved Java 11 module system incompatibility by excluding Lombok dependency from ExtentReports
+- **Updated Maven Configuration**: Added module system exports to compiler and surefire plugins to handle Java 11 compilation
+- **Build Success**: Framework now compiles and runs tests successfully (5 tests passed)
+
 ## System Architecture
 
 The framework follows a layered architecture pattern with clear separation of concerns:
