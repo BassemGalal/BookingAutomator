@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BookingAutomationSuite" parallel="methods" thread-count="3">
+    
+    <listeners>
+        <listener class-name="com.example.booking.utils.TestListener"/>
+    </listeners>
+    
+    <parameter name="environment" value="staging"/>
+    <parameter name="browser" value="chrome"/>
+    
+    <test name="E2E Booking Tests">
+        <classes>
+            <class name="com.example.booking.tests.E2E_Booking_Test"/>
+        </classes>
+    </test>
+    
+</suite>

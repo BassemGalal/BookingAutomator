@@ -1,0 +1,43 @@
+{
+  "test_cards": {
+    "visa_success": {
+      "number": "4242424242424242",
+      "expiry_month": "12",
+      "expiry_year": "2025",
+      "cvc": "123",
+      "name": "Test User",
+      "expected_result": "success"
+    },
+    "visa_declined": {
+      "number": "4000000000000002",
+      "expiry_month": "12",
+      "expiry_year": "2025",
+      "cvc": "123",
+      "name": "Test User",
+      "expected_result": "declined"
+    },
+    "mastercard_success": {
+      "number": "5555555555554444",
+      "expiry_month": "12",
+      "expiry_year": "2025",
+      "cvc": "123",
+      "name": "Test User",
+      "expected_result": "success"
+    },
+    "amex_success": {
+      "number": "378282246310005",
+      "expiry_month": "12",
+      "expiry_year": "2025",
+      "cvc": "1234",
+      "name": "Test User",
+      "expected_result": "success"
+    }
+  },
+  "billing_address": {
+    "line1": "123 Test Street",
+    "city": "Test City",
+    "state": "TS",
+    "postal_code": "12345",
+    "country": "US"
+  }
+}
