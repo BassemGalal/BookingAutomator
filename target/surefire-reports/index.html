@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-BookingAutomationSuite" class="navigator-link">
-              <span class="suite-name border-passed">BookingAutomationSuite</span>
+              <span class="suite-name border-failed">BookingAutomationSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,12 +55,12 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-BookingAutomationSuite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-BookingAutomationSuite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>7 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,41 +92,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 5 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-BookingAutomationSuite" class="hide-methods passed suite-BookingAutomationSuite"> (hide)</a> <!-- hide-methods passed suite-BookingAutomationSuite -->
-                      <a href="#" panel-name="suite-BookingAutomationSuite" class="show-methods passed suite-BookingAutomationSuite"> (show)</a> <!-- show-methods passed suite-BookingAutomationSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BookingAutomationSuite" class="hide-methods failed suite-BookingAutomationSuite"> (hide)</a> <!-- hide-methods failed suite-BookingAutomationSuite -->
+                      <a href="#" panel-name="suite-BookingAutomationSuite" class="show-methods failed suite-BookingAutomationSuite"> (show)</a> <!-- show-methods failed suite-BookingAutomationSuite -->
                     </span>
-                    <div class="method-list-content passed suite-BookingAutomationSuite">
+                    <div class="method-list-content failed suite-BookingAutomationSuite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="testBookingCancellation">testBookingCancellation</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="test_100PercentCoupon">test_100PercentCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="testBookingModification">testBookingModification</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="test_fawryGatewayWithoutCoupon">test_fawryGatewayWithoutCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="testCompleteBookingWithFawry">testCompleteBookingWithFawry</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="test_gatewayWithPartialCoupon">test_gatewayWithPartialCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="testCompleteBookingWithPaymob">testCompleteBookingWithPaymob</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="test_paymobGatewayWithoutCoupon">test_paymobGatewayWithoutCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="testCompleteBookingWithStripe">testCompleteBookingWithStripe</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BookingAutomationSuite" title="com.example.booking.tests.E2E_Booking_Test" class="method navigator-link" hash-for-method="test_stripeGatewayWithoutCoupon">test_stripeGatewayWithoutCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-BookingAutomationSuite -->
+                    </div> <!-- method-list-content failed suite-BookingAutomationSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -138,59 +138,94 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BookingAutomationSuite" class="panel BookingAutomationSuite">
-          <div class="suite-BookingAutomationSuite-class-passed">
+          <div class="suite-BookingAutomationSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.example.booking.tests.E2E_Booking_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testBookingCancellation">
-                  </a> <!-- testBookingCancellation -->
-                  <span class="method-name">testBookingCancellation</span>
+                  <a name="test_100PercentCoupon">
+                  </a> <!-- test_100PercentCoupon -->
+                  <span class="method-name">test_100PercentCoupon</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test failed: Failed to get free slots
+	at com.example.booking.tests.E2E_Booking_Test.test_100PercentCoupon(E2E_Booking_Test.java:289)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Booking cancellation flow)                  </em>
+(Group B: 100% Coupon)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testBookingModification">
-                  </a> <!-- testBookingModification -->
-                  <span class="method-name">testBookingModification</span>
+                  <a name="test_fawryGatewayWithoutCoupon">
+                  </a> <!-- test_fawryGatewayWithoutCoupon -->
+                  <span class="method-name">test_fawryGatewayWithoutCoupon</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test failed: Failed to get free slots
+	at com.example.booking.tests.E2E_Booking_Test.test_fawryGatewayWithoutCoupon(E2E_Booking_Test.java:191)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Booking modification flow)                  </em>
+(Group A: Fawry Gateway without Coupon)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testCompleteBookingWithFawry">
-                  </a> <!-- testCompleteBookingWithFawry -->
-                  <span class="method-name">testCompleteBookingWithFawry</span>
+                  <a name="test_gatewayWithPartialCoupon">
+                  </a> <!-- test_gatewayWithPartialCoupon -->
+                  <span class="method-name">test_gatewayWithPartialCoupon</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test failed: Failed to get free slots
+	at com.example.booking.tests.E2E_Booking_Test.test_gatewayWithPartialCoupon(E2E_Booking_Test.java:242)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Complete booking flow with Fawry payment)                  </em>
+(Group B: Gateway with Partial Coupon)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testCompleteBookingWithPaymob">
-                  </a> <!-- testCompleteBookingWithPaymob -->
-                  <span class="method-name">testCompleteBookingWithPaymob</span>
+                  <a name="test_paymobGatewayWithoutCoupon">
+                  </a> <!-- test_paymobGatewayWithoutCoupon -->
+                  <span class="method-name">test_paymobGatewayWithoutCoupon</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test failed: Failed to get free slots
+	at com.example.booking.tests.E2E_Booking_Test.test_paymobGatewayWithoutCoupon(E2E_Booking_Test.java:145)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Complete booking flow with Paymob payment)                  </em>
+(Group A: Paymob Gateway without Coupon)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testCompleteBookingWithStripe">
-                  </a> <!-- testCompleteBookingWithStripe -->
-                  <span class="method-name">testCompleteBookingWithStripe</span>
+                  <a name="test_stripeGatewayWithoutCoupon">
+                  </a> <!-- test_stripeGatewayWithoutCoupon -->
+                  <span class="method-name">test_stripeGatewayWithoutCoupon</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test failed: Failed to get free slots
+	at com.example.booking.tests.E2E_Booking_Test.test_stripeGatewayWithoutCoupon(E2E_Booking_Test.java:99)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Complete booking flow with Stripe payment)                  </em>
+(Group A: Stripe Gateway without Coupon)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-BookingAutomationSuite-class-passed -->
+          </div> <!-- suite-BookingAutomationSuite-class-failed -->
         </div> <!-- panel BookingAutomationSuite -->
         <div panel-name="test-xml-BookingAutomationSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,17 +235,43 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;BookingAutomationSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;BookingAutomationSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;parameter name=&quot;environment&quot; value=&quot;staging&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.example.booking.utils.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;E2E Booking Tests&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;Gateway Tests - Group A&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;gateway&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.booking.tests.E2E_Booking_Test&quot;/&gt;
+      &lt;class name=&quot;com.example.booking.tests.E2E_Booking_Test&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;test_stripeGatewayWithoutCoupon&quot;/&gt;
+          &lt;include name=&quot;test_paymobGatewayWithoutCoupon&quot;/&gt;
+          &lt;include name=&quot;test_fawryGatewayWithoutCoupon&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.example.booking.tests.E2E_Booking_Test --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- E2E Booking Tests --&gt;
+  &lt;/test&gt; &lt;!-- Gateway Tests - Group A --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;Coupon Tests - Group B&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;coupon&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.booking.tests.E2E_Booking_Test&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;test_gatewayWithPartialCoupon&quot;/&gt;
+          &lt;include name=&quot;test_100PercentCoupon&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.example.booking.tests.E2E_Booking_Test --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Coupon Tests - Group B --&gt;
 &lt;/suite&gt; &lt;!-- BookingAutomationSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,7 +283,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">E2E Booking Tests (1 class)</span>
+                <span class="test-name">Gateway Tests - Group A (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Coupon Tests - Group B (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,6 +296,74 @@
             <span class="header-content">Groups for BookingAutomationSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">coupon</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_100PercentCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_gatewayWithPartialCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">fawry</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_fawryGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">full</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_100PercentCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">gateway</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_fawryGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_paymobGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_stripeGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">partial</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_gatewayWithPartialCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">paymob</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_paymobGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">stripe</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_stripeGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-BookingAutomationSuite" class="panel">
@@ -250,30 +382,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCompleteBookingWithFawry')
+data.setCell(0, 1, 'test_stripeGatewayWithoutCoupon')
 data.setCell(0, 2, 'com.example.booking.tests.E2E_Booking_Test')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 723);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testBookingModification')
+data.setCell(1, 1, 'test_paymobGatewayWithoutCoupon')
 data.setCell(1, 2, 'com.example.booking.tests.E2E_Booking_Test')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 723);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testBookingCancellation')
+data.setCell(2, 1, 'test_gatewayWithPartialCoupon')
 data.setCell(2, 2, 'com.example.booking.tests.E2E_Booking_Test')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 14);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testCompleteBookingWithPaymob')
+data.setCell(3, 1, 'test_fawryGatewayWithoutCoupon')
 data.setCell(3, 2, 'com.example.booking.tests.E2E_Booking_Test')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 11);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testCompleteBookingWithStripe')
+data.setCell(4, 1, 'test_100PercentCoupon')
 data.setCell(4, 2, 'com.example.booking.tests.E2E_Booking_Test')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 11);
 window.suiteTableData['BookingAutomationSuite']= { tableData: data, tableDiv: 'times-div-BookingAutomationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-BookingAutomationSuite">
               </div> <!-- times-div-BookingAutomationSuite -->
             </div> <!-- times-div -->
@@ -288,9 +420,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-BookingAutomationSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.example.booking.tests.E2E_Booking_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">test_100PercentCoupon</span>
+                <br/>
+                <span class="ignored-method-name">test_fawryGatewayWithoutCoupon</span>
+                <br/>
+                <span class="ignored-method-name">test_paymobGatewayWithoutCoupon</span>
+                <br/>
+                <span class="ignored-method-name">test_gatewayWithPartialCoupon</span>
+                <br/>
+                <span class="ignored-method-name">test_stripeGatewayWithoutCoupon</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-BookingAutomationSuite" class="panel">
@@ -300,82 +447,36 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.example.booking.tests.E2E_Booking_Test</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_stripeGatewayWithoutCoupon</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">12 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">30 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">30 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">30 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testCompleteBookingWithFawry</span>
-                <span class="method-start">31 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testBookingModification</span>
-                <span class="method-start">31 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_paymobGatewayWithoutCoupon</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testBookingCancellation</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">34 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">35 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">35 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">36 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">36 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">testCompleteBookingWithPaymob</span>
-                <span class="method-start">37 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_fawryGatewayWithoutCoupon</span>
+                <span class="method-start">734 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testCompleteBookingWithStripe</span>
-                <span class="method-start">37 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_gatewayWithPartialCoupon</span>
+                <span class="method-start">777 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">38 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">38 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">39 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">65 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_100PercentCoupon</span>
+                <span class="method-start">780 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

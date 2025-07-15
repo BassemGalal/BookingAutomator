@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BookingAutomationSuite" parallel="methods" thread-count="3">
+<suite name="BookingAutomationSuite" parallel="methods" thread-count="2">
     
     <listeners>
         <listener class-name="com.example.booking.utils.TestListener"/>
@@ -9,9 +9,36 @@
     <parameter name="environment" value="staging"/>
     <parameter name="browser" value="chrome"/>
     
-    <test name="E2E Booking Tests">
+    <test name="Gateway Tests - Group A">
+        <groups>
+            <run>
+                <include name="gateway"/>
+            </run>
+        </groups>
         <classes>
-            <class name="com.example.booking.tests.E2E_Booking_Test"/>
+            <class name="com.example.booking.tests.E2E_Booking_Test">
+                <methods>
+                    <include name="test_stripeGatewayWithoutCoupon"/>
+                    <include name="test_paymobGatewayWithoutCoupon"/>
+                    <include name="test_fawryGatewayWithoutCoupon"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Coupon Tests - Group B">
+        <groups>
+            <run>
+                <include name="coupon"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.booking.tests.E2E_Booking_Test">
+                <methods>
+                    <include name="test_gatewayWithPartialCoupon"/>
+                    <include name="test_100PercentCoupon"/>
+                </methods>
+            </class>
         </classes>
     </test>
     
