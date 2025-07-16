@@ -1,43 +1,60 @@
 package com.example.booking.utils;
 
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.ExtentReports;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
 /**
  * TestNG listener for test execution reporting and monitoring
- * Handles test lifecycle events and custom reporting
  */
 public class TestListener implements ITestListener {
-    
+
     private static final Logger logger = LogManager.getLogger(TestListener.class);
-    
-    // TODO: Implement test start/finish event handling
-    // TODO: Add screenshot capture on test failure
-    // TODO: Implement ExtentReports integration
-    // TODO: Add test retry mechanism for flaky tests
-    // TODO: Implement custom test result logging
-    // TODO: Add integration with external reporting tools
-    
+    private static ExtentReports extent = ExtentManager.getInstance();
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
+    @Override
+    public void onStart(ITestContext context) {
+        logger.info("Starting Test Suite: {}", context.getName());
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        logger.info("Finishing Test Suite: {}", context.getName());
+        ExtentManager.flush();
+    }
+
     @Override
     public void onTestStart(ITestResult result) {
-        // TODO: Handle test start event
+        logger.info("Starting Test: {}", result.getName());
+        ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+        extentTest.set(test);
     }
-    
+
     @Override
     public void onTestSuccess(ITestResult result) {
-        // TODO: Handle test success event
+        logger.info("Test Passed: {}", result.getName());
+        extentTest.get().log(Status.PASS, "Test Passed");
     }
-    
+
     @Override
     public void onTestFailure(ITestResult result) {
-        // TODO: Handle test failure event
+        logger.error("Test Failed: {}", result.getName(), result.getThrowable());
+        extentTest.get().log(Status.FAIL, "Test Failed: " + result.getThrowable());
+
+        // Placeholder for screenshot capture
+        // String screenshotPath = ScreenshotUtil.captureScreenshot(result.getName());
+        // extentTest.get().addScreenCaptureFromPath(screenshotPath);
     }
-    
+
     @Override
     public void onTestSkipped(ITestResult result) {
-        // TODO: Handle test skip event
+        logger.warn("Test Skipped: {}", result.getName());
+        extentTest.get().log(Status.SKIP, "Test Skipped");
     }
-    
 }

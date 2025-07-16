@@ -12,8 +12,8 @@ import java.util.Map;
 /**
  * Page Object for Paymob Payment Page
  */
-public class PaymobPaymentPage extends BasePage {
-    
+public class PaymobPaymentPage extends BasePaymentPage {
+
     private final ConfigManager configManager;
     private final JsonUtil jsonUtil;
     
@@ -51,10 +51,12 @@ public class PaymobPaymentPage extends BasePage {
     /**
      * Navigate to Paymob payment page
      */
-    public void navigateToPayment(String redirectUrl) {
+    @Override
+    public BasePaymentPage navigateToPayment(String redirectUrl) {
         logger.info("Navigating to Paymob payment page: {}", redirectUrl);
         navigateTo(redirectUrl);
         waitForPageLoad();
+        return this;
     }
     
     /**

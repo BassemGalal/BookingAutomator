@@ -1,6 +1,9 @@
 package com.example.booking.api.pojos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 /**
  * POJO for Free Slot Response
@@ -14,12 +17,12 @@ public class FreeSlotResponse {
     private String tSlotTime;
     
     @JsonProperty("serviceId")
-    private String serviceId;
+    private int serviceId;
     
     // Constructors
     public FreeSlotResponse() {}
     
-    public FreeSlotResponse(String tSlotDate, String tSlotTime, String serviceId) {
+    public FreeSlotResponse(String tSlotDate, String tSlotTime, int serviceId) {
         this.tSlotDate = tSlotDate;
         this.tSlotTime = tSlotTime;
         this.serviceId = serviceId;
@@ -42,11 +45,11 @@ public class FreeSlotResponse {
         this.tSlotTime = tSlotTime;
     }
     
-    public String getServiceId() {
+    public int getServiceId() {
         return serviceId;
     }
     
-    public void setServiceId(String serviceId) {
+    public void setServiceId(int serviceId) {
         this.serviceId = serviceId;
     }
     

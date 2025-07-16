@@ -6,21 +6,21 @@ package com.example.booking.api.endpoints;
 public class BookingEndpoints {
     
     // Free slots endpoint
-    public static final String FREE_SLOTS = "/api/v1/free-slots";
+    public static final String FREE_SLOTS = "/therapist-api/tSlots";
     
     // Timeslot details endpoint
-    public static final String TIMESLOT_DETAILS = "/api/v1/timeslot-details";
+    public static final String ADD_SINGLE_TIMESLOT = "/therapist-api/tSlots/addSingle";
     
     // Reservation endpoint
-    public static final String RESERVATION = "/api/v1/reservation";
+    public static final String RESERVATION = "client/reservation/pay";
     
     // Validate transaction endpoint
-    public static final String VALIDATE_TRANSACTION = "/api/v1/validate-transaction";
+    public static final String VALIDATE_TRANSACTION = "/client/reservation/pending-payments/validate";
     
     // Cron simulation endpoint
-    public static final String CRON_SIMULATION = "/api/v1/cron-simulation";
+    public static final String CRON_SIMULATION = "/crons/pending-payments/validate";
     
     // Operator orders endpoint
-    public static final String OPERATOR_ORDERS = "/api/v1/operator/orders";
+    public static final String OPERATOR_ORDERS = "/shezlong-operator/payments/paymentAttempts";
     
 }

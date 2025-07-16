@@ -15,83 +15,71 @@ import java.time.format.DateTimeFormatter;
  * Provides centralized reporting functionality across the framework
  */
 public class ExtentManager {
-    
+
     private static final Logger logger = LogManager.getLogger(ExtentManager.class);
     private static ExtentReports extent;
     private static ExtentSparkReporter sparkReporter;
-    
-    /**
-     * Get ExtentReports instance
-     */
+    private static String reportPath;
+
+    private static final String REPORTS_DIR = System.getProperty("report.dir", "extent-reports");
+
     public static ExtentReports getInstance() {
         if (extent == null) {
             createInstance();
         }
         return extent;
     }
-    
-    /**
-     * Create ExtentReports instance
-     */
+
     private static void createInstance() {
         try {
-            // Create reports directory if it doesn't exist
-            File reportsDir = new File("extent-reports");
+            File reportsDir = new File(REPORTS_DIR);
             if (!reportsDir.exists()) {
                 reportsDir.mkdirs();
             }
-            
-            // Generate report filename with timestamp
+
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
-            String reportPath = "extent-reports/ExtentReport_" + timestamp + ".html";
-            
-            // Initialize Spark reporter
+            reportPath = REPORTS_DIR + "/ExtentReport_" + timestamp + ".html";
+
             sparkReporter = new ExtentSparkReporter(reportPath);
-            
-            // Configure report appearance
             sparkReporter.config().setTheme(Theme.STANDARD);
             sparkReporter.config().setDocumentTitle("Booking Automation Test Report");
             sparkReporter.config().setReportName("Booking System Test Results");
             sparkReporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
-            
-            // Initialize ExtentReports
+
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
-            
-            // Add system information
+
             extent.setSystemInfo("Environment", System.getProperty("environment", "staging"));
             extent.setSystemInfo("User", System.getProperty("user.name"));
             extent.setSystemInfo("Java Version", System.getProperty("java.version"));
             extent.setSystemInfo("OS", System.getProperty("os.name"));
             extent.setSystemInfo("Browser", System.getProperty("browser", "chrome"));
-            
-            logger.info("ExtentReports initialized successfully. Report path: {}", reportPath);
-            
+
+            logger.info("ExtentReports initialized. Report path: {}", reportPath);
+
         } catch (Exception e) {
             logger.error("Error initializing ExtentReports: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to initialize ExtentReports", e);
         }
     }
-    
-    /**
-     * Flush reports and close
-     */
+
     public static void flush() {
         if (extent != null) {
             extent.flush();
-            logger.info("ExtentReports flushed successfully");
+            logger.info("ExtentReports flushed. Report available at: {}", reportPath);
         }
     }
-    
-    /**
-     * Close reports
-     */
+
     public static void close() {
         if (extent != null) {
             extent.flush();
             extent = null;
             sparkReporter = null;
-            logger.info("ExtentReports closed");
+            logger.info("ExtentReports closed.");
         }
+    }
+
+    public static String getReportPath() {
+        return reportPath;
     }
 }

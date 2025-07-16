@@ -3,9 +3,9 @@ package com.example.booking.api.pojos;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * POJO for Validation Response - Minimal version for optional logging
+ * POJO for CRON Response - Minimal version for optional logging
  */
-public class ValidationResponse {
+public class cronResponse {
 
     @JsonProperty("status")
     private String status;
@@ -13,7 +13,7 @@ public class ValidationResponse {
     @JsonProperty("message")
     private String message;
 
-    public ValidationResponse() {}
+    public cronResponse() {}
 
     public String getStatus() {
         return status;
